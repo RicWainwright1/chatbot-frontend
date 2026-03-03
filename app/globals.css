@@ -20,32 +20,32 @@
   --card-foreground: hsl(230 48% 20%);
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(230 48% 20%);
-  --primary: hsl(233 51% 33%);         /* Core Blue #2A317F */
+  --primary: hsl(233 51% 33%); /* Core Blue #2A317F */
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(0 0% 93%);          /* Light Grey #EDEDED */
+  --secondary: hsl(0 0% 93%); /* Light Grey #EDEDED */
   --secondary-foreground: hsl(233 51% 33%);
   --muted: hsl(0 0% 95%);
   --muted-foreground: hsl(230 10% 40%);
-  --accent: hsl(0 100% 71%);           /* Pink/Coral #FF6B6B */
+  --accent: hsl(0 100% 71%); /* Pink/Coral #FF6B6B */
   --accent-foreground: hsl(0 0% 100%);
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: hsl(0 0% 98%);
   --border: hsl(0 0% 90%);
   --input: hsl(0 0% 90%);
-  --ring: hsl(233 51% 33%);            /* Core Blue for focus rings */
-  --chart-1: hsl(233 51% 33%);         /* Core Blue */
-  --chart-2: hsl(0 100% 71%);          /* Pink/Coral */
-  --chart-3: hsl(119 100% 81%);        /* Lime Green */
-  --chart-4: hsl(0 0% 93%);            /* Light Grey */
+  --ring: hsl(233 51% 33%); /* Core Blue for focus rings */
+  --chart-1: hsl(233 51% 33%); /* Core Blue */
+  --chart-2: hsl(0 100% 71%); /* Pink/Coral */
+  --chart-3: hsl(119 100% 81%); /* Lime Green */
+  --chart-4: hsl(0 0% 93%); /* Light Grey */
   --chart-5: hsl(233 51% 45%);
-  --sidebar-background: hsl(233 51% 33%);   /* Core Blue sidebar */
-  --sidebar-foreground: hsl(0 0% 100%);     /* White text */
+  --sidebar-background: hsl(233 51% 33%); /* Core Blue sidebar */
+  --sidebar-foreground: hsl(0 0% 100%); /* White text */
   --sidebar-primary: hsl(0 0% 100%);
   --sidebar-primary-foreground: hsl(233 51% 33%);
   --sidebar-accent: hsla(0, 0%, 100%, 0.1);
   --sidebar-accent-foreground: hsl(0 0% 100%);
   --sidebar-border: hsla(0, 0%, 100%, 0.15);
-  --sidebar-ring: hsl(119 100% 81%);        /* Lime Green ring */
+  --sidebar-ring: hsl(119 100% 81%); /* Lime Green ring */
   /* border radius unit */
   --radius: 0.5rem;
   --sidebar: hsl(233 51% 33%);
@@ -59,23 +59,23 @@
   --card-foreground: hsl(0 0% 98%);
   --popover: hsl(230 25% 10%);
   --popover-foreground: hsl(0 0% 98%);
-  --primary: hsl(233 51% 45%);         /* Lighter Core Blue for dark mode */
+  --primary: hsl(233 51% 45%); /* Lighter Core Blue for dark mode */
   --primary-foreground: hsl(0 0% 100%);
   --secondary: hsl(230 15% 18%);
   --secondary-foreground: hsl(0 0% 98%);
   --muted: hsl(230 15% 15%);
   --muted-foreground: hsl(230 10% 60%);
-  --accent: hsl(0 100% 71%);           /* Pink/Coral */
+  --accent: hsl(0 100% 71%); /* Pink/Coral */
   --accent-foreground: hsl(0 0% 100%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(0 0% 98%);
   --border: hsl(230 20% 20%);
   --input: hsl(230 20% 20%);
   --ring: hsl(233 51% 45%);
-  --chart-1: hsl(233 51% 55%);         /* Core Blue */
-  --chart-2: hsl(0 100% 71%);          /* Pink/Coral */
-  --chart-3: hsl(119 100% 75%);        /* Lime Green (slightly dimmed) */
-  --chart-4: hsl(0 0% 40%);            /* Grey */
+  --chart-1: hsl(233 51% 55%); /* Core Blue */
+  --chart-2: hsl(0 100% 71%); /* Pink/Coral */
+  --chart-3: hsl(119 100% 75%); /* Lime Green (slightly dimmed) */
+  --chart-4: hsl(0 0% 40%); /* Grey */
   --chart-5: hsl(233 51% 65%);
   --sidebar-background: hsl(230 30% 12%);
   --sidebar-foreground: hsl(0 0% 98%);
@@ -84,7 +84,7 @@
   --sidebar-accent: hsl(230 25% 18%);
   --sidebar-accent-foreground: hsl(0 0% 98%);
   --sidebar-border: hsl(230 20% 20%);
-  --sidebar-ring: hsl(119 100% 75%);   /* Lime Green */
+  --sidebar-ring: hsl(119 100% 75%); /* Lime Green */
   --sidebar: hsl(230 30% 12%);
 }
 

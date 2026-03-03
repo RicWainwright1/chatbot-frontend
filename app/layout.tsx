@@ -10,7 +10,8 @@ import { SessionProvider } from "next-auth/react";
 export const metadata: Metadata = {
   metadataBase: new URL("https://chat.vercel.ai"),
   title: "TIF Agent",
-  description: "Access and query the TIF dataset to get realtime data on Kids, Parents and Families.",
+  description:
+    "Access and query the TIF dataset to get realtime data on Kids, Parents and Families.",
 };
 
 export const viewport = {
@@ -19,16 +20,56 @@ export const viewport = {
 
 const openSauceOne = localFont({
   src: [
-    { path: "../public/fonts/OpenSauceOne-Light.ttf", weight: "300", style: "normal" },
-    { path: "../public/fonts/OpenSauceOne-LightItalic.ttf", weight: "300", style: "italic" },
-    { path: "../public/fonts/OpenSauceOne-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../public/fonts/OpenSauceOne-Italic.ttf", weight: "400", style: "italic" },
-    { path: "../public/fonts/OpenSauceOne-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../public/fonts/OpenSauceOne-MediumItalic.ttf", weight: "500", style: "italic" },
-    { path: "../public/fonts/OpenSauceOne-SemiBold.ttf", weight: "600", style: "normal" },
-    { path: "../public/fonts/OpenSauceOne-SemiBoldItalic.ttf", weight: "600", style: "italic" },
-    { path: "../public/fonts/OpenSauceOne-Bold.ttf", weight: "700", style: "normal" },
-    { path: "../public/fonts/OpenSauceOne-BoldItalic.ttf", weight: "700", style: "italic" },
+    {
+      path: "../public/fonts/OpenSauceOne-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-MediumItalic.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-SemiBoldItalic.ttf",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/OpenSauceOne-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
   ],
   display: "swap",
   variable: "--font-open-sauce",

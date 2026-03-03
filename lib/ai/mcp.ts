@@ -20,7 +20,9 @@ async function createClient(
   auth: string | undefined,
   name: string
 ): Promise<MCPClient | null> {
-  if (!url) return null;
+  if (!url) {
+    return null;
+  }
   try {
     return await createMCPClient({
       transport: {
@@ -78,8 +80,20 @@ export async function getMcpToolsWithCleanup(): Promise<{
 
   const cleanup = async () => {
     const promises: Promise<void>[] = [];
-    if (companyClient) promises.push(companyClient.close().catch(() => {}));
-    if (surveyClient) promises.push(surveyClient.close().catch(() => {}));
+    if (companyClient) {
+      promises.push(
+        companyClient.close().catch(() => {
+          /* ignore */
+        })
+      );
+    }
+    if (surveyClient) {
+      promises.push(
+        surveyClient.close().catch(() => {
+          /* ignore */
+        })
+      );
+    }
     await Promise.all(promises);
   };
 

@@ -72,8 +72,13 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   setOpenMobile(false);
                 }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/tif-LOGO.png" alt="The Insights Family" width={150} height={46} className="cursor-pointer brightness-0 invert" />
+                <Image
+                  alt="The Insights Family"
+                  className="cursor-pointer brightness-0 invert"
+                  height={46}
+                  src="/images/tif-LOGO.png"
+                  width={150}
+                />
               </Link>
               <div className="flex flex-row gap-1">
                 {user && (

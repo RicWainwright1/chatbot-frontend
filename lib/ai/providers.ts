@@ -1,5 +1,5 @@
-import { createAnthropic } from '@ai-sdk/anthropic';
-import { createOpenAI } from '@ai-sdk/openai';
+import { createAnthropic } from "@ai-sdk/anthropic";
+import { createOpenAI } from "@ai-sdk/openai";
 import {
   customProvider,
   extractReasoningMiddleware,
@@ -10,15 +10,20 @@ import { isTestEnvironment } from "../constants";
 const anthropic = createAnthropic();
 const openai = createOpenAI();
 const perplexity = createOpenAI({
-  name: 'perplexity',
-  baseURL: 'https://api.perplexity.ai/',
+  name: "perplexity",
+  baseURL: "https://api.perplexity.ai/",
   apiKey: process.env.PERPLEXITY_API_KEY,
 });
 
 // Keep the test environment mock provider as-is
 export const myProvider = isTestEnvironment
   ? (() => {
-      const { artifactModel, chatModel, reasoningModel, titleModel } = require("./models.mock");
+      const {
+        artifactModel,
+        chatModel,
+        reasoningModel,
+        titleModel,
+      } = require("./models.mock");
       return customProvider({
         languageModels: {
           "chat-model": chatModel,
@@ -35,21 +40,21 @@ export function getLanguageModel(modelId: string) {
     return myProvider.languageModel(modelId);
   }
 
-  const [provider, ...rest] = modelId.split('/');
-  const model = rest.join('/');
+  const [provider, ...rest] = modelId.split("/");
+  const model = rest.join("/");
 
   const isReasoningModel =
     modelId.includes("reasoning") || modelId.endsWith("-thinking");
 
-  let languageModel;
+  let languageModel: ReturnType<typeof anthropic>;
   switch (provider) {
-    case 'anthropic':
+    case "anthropic":
       languageModel = anthropic(model);
       break;
-    case 'openai':
+    case "openai":
       languageModel = openai(model);
       break;
-    case 'perplexity':
+    case "perplexity":
       languageModel = perplexity(model);
       break;
     default:

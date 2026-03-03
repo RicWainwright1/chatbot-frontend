@@ -1,5 +1,6 @@
 "use client";
 import type { UseChatHelpers } from "@ai-sdk/react";
+import Image from "next/image";
 import { useState } from "react";
 import type { Vote } from "@/lib/db/schema";
 import type { ChatMessage } from "@/lib/types";
@@ -16,7 +17,6 @@ import {
   ToolInput,
   ToolOutput,
 } from "./elements/tool";
-import Image from "next/image";
 import { MessageActions } from "./message-actions";
 import { MessageEditor } from "./message-editor";
 import { MessageReasoning } from "./message-reasoning";
@@ -66,7 +66,13 @@ const PurePreviewMessage = ({
       >
         {message.role === "assistant" && (
           <div className="-mt-1 flex size-8 shrink-0 items-center justify-center">
-            <Image src="/images/tif_shield.png" alt="TIF" width={32} height={32} className="rounded-full" />
+            <Image
+              alt="TIF"
+              className="rounded-full"
+              height={32}
+              src="/images/tif_shield.png"
+              width={32}
+            />
           </div>
         )}
 
@@ -345,13 +351,12 @@ const PurePreviewMessage = ({
             // Generic handler for MCP and other tool calls
             if (type.startsWith("tool-")) {
               const { toolCallId, state } = part as any;
-              const toolName = type.replace("tool-", "");
-
               return (
                 <Tool defaultOpen={true} key={toolCallId}>
                   <ToolHeader state={state} type={type} />
                   <ToolContent>
-                    {(state === "input-available" || state === "partial-call") && (
+                    {(state === "input-available" ||
+                      state === "partial-call") && (
                       <ToolInput input={(part as any).input} />
                     )}
                     {state === "output-available" && (
@@ -402,7 +407,13 @@ export const ThinkingMessage = () => {
       <div className="flex items-start justify-start gap-3">
         <div className="-mt-1 flex size-8 shrink-0 items-center justify-center">
           <div className="animate-pulse">
-            <Image src="/images/tif_shield.png" alt="TIF" width={32} height={32} className="rounded-full" />
+            <Image
+              alt="TIF"
+              className="rounded-full"
+              height={32}
+              src="/images/tif_shield.png"
+              width={32}
+            />
           </div>
         </div>
 

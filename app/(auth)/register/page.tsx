@@ -55,7 +55,8 @@ export default function Page() {
         <div className="flex flex-col items-center justify-center gap-2 px-4 text-center sm:px-16">
           <h1 className="font-bold text-3xl text-primary">TIF Agent</h1>
           <p className="text-muted-foreground text-sm mb-4">
-            Access and query the TIF dataset to get realtime data on Kids, Parents and Families.
+            Access and query the TIF dataset to get realtime data on Kids,
+            Parents and Families.
           </p>
           <h3 className="font-semibold text-xl dark:text-zinc-50">Sign Up</h3>
           <p className="text-muted-foreground text-sm">

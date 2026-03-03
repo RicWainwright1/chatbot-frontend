@@ -6,7 +6,9 @@ import { useMemo } from "react";
 
 function getFirstName(session: any): string | null {
   const name = session?.user?.name;
-  if (!name) return null;
+  if (!name) {
+    return null;
+  }
   return name.split(" ")[0];
 }
 
@@ -28,7 +30,7 @@ function getGreeting(firstName: string | null): string {
     greetings.push(
       `Hello ${name}!`,
       `Welcome back ${name}!`,
-      `What are we looking at today ${name}?`,
+      `What are we looking at today ${name}?`
     );
   } else {
     greetings.push("Hello there!");

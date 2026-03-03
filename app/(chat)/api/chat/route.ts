@@ -1,4 +1,3 @@
-import { checkBotId } from "botid/server";
 import { geolocation, ipAddress } from "@vercel/functions";
 import {
   convertToModelMessages,
@@ -8,17 +7,18 @@ import {
   stepCountIs,
   streamText,
 } from "ai";
+import { checkBotId } from "botid/server";
 import { after } from "next/server";
 import { createResumableStreamContext } from "resumable-stream";
 import { auth, type UserType } from "@/app/(auth)/auth";
 import { entitlementsByUserType } from "@/lib/ai/entitlements";
+import { getMcpToolsWithCleanup } from "@/lib/ai/mcp";
 import { type RequestHints, systemPrompt } from "@/lib/ai/prompts";
 import { getLanguageModel } from "@/lib/ai/providers";
 import { createDocument } from "@/lib/ai/tools/create-document";
 import { getWeather } from "@/lib/ai/tools/get-weather";
 import { requestSuggestions } from "@/lib/ai/tools/request-suggestions";
 import { updateDocument } from "@/lib/ai/tools/update-document";
-import { getMcpToolsWithCleanup } from "@/lib/ai/mcp";
 import { isProductionEnvironment } from "@/lib/constants";
 import {
   createStreamId,
@@ -145,7 +145,8 @@ export async function POST(request: Request) {
 
     const modelMessages = await convertToModelMessages(uiMessages);
 
-    const { tools: mcpTools, cleanup: mcpCleanup } = await getMcpToolsWithCleanup();
+    const { tools: mcpTools, cleanup: mcpCleanup } =
+      await getMcpToolsWithCleanup();
     const mcpToolNames = Object.keys(mcpTools);
 
     const stream = createUIMessageStream({

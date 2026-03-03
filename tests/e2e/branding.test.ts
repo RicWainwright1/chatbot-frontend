@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { test } from "@playwright/test";
 
 test.use({ viewport: { width: 1400, height: 900 } });
 
@@ -26,7 +26,9 @@ test("sidebar with TIF logo", async ({ page }) => {
 
   if (toggleExists === 0) {
     // Try the first button in the header (the panel toggle icon)
-    const panelButton = page.locator('header button, [data-slot="sidebar"] button').first();
+    const panelButton = page
+      .locator('header button, [data-slot="sidebar"] button')
+      .first();
     const panelCount = await panelButton.count();
     console.log("=== PANEL BUTTON COUNT:", panelCount);
     if (panelCount > 0) {
@@ -57,7 +59,9 @@ test("sidebar with TIF logo", async ({ page }) => {
       offsetHeight: el.offsetHeight,
       computedFilter: window.getComputedStyle(el).filter,
       computedDisplay: window.getComputedStyle(el).display,
-      parentBg: window.getComputedStyle(el.closest('[data-sidebar="sidebar"]') || el.parentElement!).backgroundColor,
+      parentBg: window.getComputedStyle(
+        el.closest('[data-sidebar="sidebar"]') || (el.parentElement as Element)
+      ).backgroundColor,
     }));
     console.log("=== LOGO DETAILS:", JSON.stringify(info, null, 2));
   }
