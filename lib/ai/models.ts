@@ -10,10 +10,16 @@ export type ChatModel = {
 export const chatModels: ChatModel[] = [
   // Anthropic
   {
+    id: "anthropic/claude-opus-4-6",
+    name: "Claude Opus 4.6",
+    provider: "anthropic",
+    description: "Most powerful, 1M context, best for complex reasoning",
+  },
+  {
     id: "anthropic/claude-sonnet-4-5",
     name: "Claude Sonnet 4.5",
     provider: "anthropic",
-    description: "Most capable, great for complex analysis and writing",
+    description: "Great balance of capability and speed",
   },
   {
     id: "anthropic/claude-haiku-4-5",
@@ -23,14 +29,14 @@ export const chatModels: ChatModel[] = [
   },
   // OpenAI
   {
-    id: "openai/gpt-4o",
-    name: "GPT-4o",
+    id: "openai/gpt-4.1",
+    name: "GPT-4.1",
     provider: "openai",
-    description: "OpenAI flagship model, strong all-rounder",
+    description: "OpenAI flagship, 1M context, strong at coding",
   },
   {
-    id: "openai/gpt-4o-mini",
-    name: "GPT-4o Mini",
+    id: "openai/gpt-4.1-mini",
+    name: "GPT-4.1 Mini",
     provider: "openai",
     description: "Fast and cost-effective for simple tasks",
   },
